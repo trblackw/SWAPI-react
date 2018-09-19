@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './sabers.svg';
 import './App.css';
 import CharacterList from './components/CharacterList';
+import Search from "./components/Search";
+
 
 class App extends Component {
   render() {
@@ -11,6 +13,7 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">SWAPI PLAY</h1>
           </header>
+          <Search />
           <CharacterList />
         
       </div>
