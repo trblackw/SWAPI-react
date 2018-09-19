@@ -3,19 +3,8 @@ import Character from "./Character";
 
 class CharacterList extends Component {
   state = {
-     characters: [],
-     search: ''
+    characters: []
   };
-   
-   handleChange = (e) => {
-      this.setState({
-         search: e.target.value
-      });
-   }
-
-   handleClick = () => {
-      console.log(this.state.search)
-   }
 
   async componentDidMount() {
     try {
@@ -32,20 +21,7 @@ class CharacterList extends Component {
   render() {
     return (
       <div>
-        <input
-             type="text"
-             onChange={this.handleChange}
-             placeholder="Search for a character"
-             value={this.state.search}
-          style={{
-            margin: "1em auto",
-             width: "60%",
-          }}
-          />
-          <button style={{
-             background: '#222', color: 'whitesmoke', padding:
-          '.5em', border: '1px solid #ffe300'}} onClick={this.handleClick}>Go!</button>
-          <Character data={this.state.characters} search={this.state.search}/>
+        <Character data={this.state.characters} />
       </div>
     );
   }
